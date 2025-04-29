@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type ElementProps = {
   children: ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   className?: string;
 };
 
