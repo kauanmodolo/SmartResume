@@ -93,17 +93,18 @@ export const authenticators = pgTable(
 
 // Platform
 
+// schema.ts
 export const resumes = pgTable("resumes", {
   id: uuid("id").primaryKey().defaultRandom(),
   title: text("title").notNull(),
   data: json("data").default({}).notNull(),
-  user_id: text("user_id") // 👈 snake_case
+  userId: text("user_id") // Mantém o nome da coluna como user_id
     .references(() => users.id, { onDelete: "cascade" })
     .notNull(),
-  created_at: timestamp("created_at")
+  createdAt: timestamp("created_at")
     .defaultNow()
     .notNull(),
-  updated_at: timestamp("updated_at") // 👈 snake_case
+  updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date())
     .notNull(),

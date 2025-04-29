@@ -7,8 +7,8 @@ export const ResumesList = async() => {
     const resumes = await getResumes();
 
     const sortedResumes = resumes.sort((a,b) => {
-        if(a.updated_at < b.updated_at) return 1;
-        if(a.updated_at > b.updated_at) return -1;
+        if(a.updatedAt < b.updatedAt) return 1;
+        if(a.updatedAt > b.updatedAt) return -1;
         return 0;
         });
     return (
