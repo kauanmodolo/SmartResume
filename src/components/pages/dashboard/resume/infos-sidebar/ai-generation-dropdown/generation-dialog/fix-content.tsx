@@ -47,7 +47,7 @@ export const GenerateToFixContent = ({  onClose }: GenerateToFixContentProps) =>
                 type="submit"
                 disabled={formState.isSubmitting}
             >
-                Gear conteúdo
+                Gerar conteúdo
             </Button>
         </form>
     )

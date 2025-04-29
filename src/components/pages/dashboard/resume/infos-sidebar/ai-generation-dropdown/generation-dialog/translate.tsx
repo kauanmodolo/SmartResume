@@ -87,7 +87,7 @@ export const GenerateTranslation = ({ onClose }: GenerateTranslationProps) => {
                 type="submit"
                 disabled={formState.isSubmitting}
             >
-                Gear conteúdo
+                Gerar conteúdo
             </Button>
         </form>
     )
