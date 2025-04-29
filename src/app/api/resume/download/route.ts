@@ -32,10 +32,11 @@ export const POST = async (request: Request) => {
 
     await page.setContent(formatTailwindHTML(html, structure));
 
-    // @ts-expect-error
-    const bodyHeight = await page.evaluate(() => {
-      return document.body.scrollHeight + 20;
-    });
+      // @ts-expect-error: page.evaluate may not be typed correctly
+      const bodyHeight = await page.evaluate(() => {
+          return document.body.scrollHeight + 20;
+      });
+  
 
     const pdf = await page.pdf({
       width: "210mm",

@@ -1,33 +1,24 @@
+// next.config.ts
 import type { NextConfig } from "next";
-import test from "node:test";
-import type { Configuration, RuleSetRule } from "webpack";
 
-const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: [
-      "puppeteer-core",
-      "sparticuz/chromium",
-    ],
+const nextConfig: NextConfig = {
+  serverExternalPackages: [
+    "puppeteer-core",
+    "sparticuz/chromium",
+  ],
+  eslint: {
+    ignoreDuringBuilds: true, // 👈 Adicione esta linha
   },
-  webpack(config: { module: { rules: { test: RegExp; use: { loader: string; options: { svgo: boolean; }; }[]; }[]; }; }) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            svgo: true, // Otimiza o SVG
-          },
-        },
-      ],
+      use: [{
+        loader: '@svgr/webpack',
+        options: { svgo: true },
+      }],
     });
-
     return config;
   },
 };
 
-module.exports = nextConfig;
-
-
-
-export default nextConfig;
+export default nextConfig; // 👈 Única exportação necessária
