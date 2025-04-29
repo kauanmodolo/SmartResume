@@ -106,3 +106,5 @@ type ResumeSocialMediaData = {
 type ResumeSections = "socialMedias" | "experiences" | "educations" | "skills" | "languages" | "certifications" | "projects" | "summary";
 
 type ResumeTemplates = "safira" | "turquesa" | "morganita" | "quartzo";
+
+type AIGenerationMode = "JOB_TITLE" | "FIX_CONTENT" | "TRANSLATE_CONTENT";
