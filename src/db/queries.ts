@@ -12,8 +12,16 @@ export const getResumes = cache(async (): Promise<ResumeDto[]> => {
     if(!userId) return [];
 
     const userResumes = await db.query.resumes.findMany({
-        where: eq(resumes.userId, userId),
-    });
+        where: eq(resumes.user_id, userId), // 👈 Corrija para snake_case
+        columns: {
+          id: true,
+          title: true,
+          user_id: true,
+          created_at: true,
+          updated_at: true, // 👈 Usar snake_case
+          data: true
+        }
+      });
 
     return userResumes;
 });
