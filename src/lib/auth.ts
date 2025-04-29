@@ -7,7 +7,9 @@ import { db } from "@/db/drizzle";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: DrizzleAdapter(db),
-  providers: [GitHub, Google],
+  providers: [
+    GitHub ({allowDangerousEmailAccountLinking: true}),
+    Google ({allowDangerousEmailAccountLinking: true})],
   pages: {
     signIn: "/auth/login",
   },
