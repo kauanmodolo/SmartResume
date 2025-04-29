@@ -14,7 +14,7 @@ const main = async () => {
     const db = drizzle(sql);
     
     await migrate(db, {
-      migrationsFolder: "drizzle/migrations",
+      migrationsFolder: "./src/drizzle",
     });
     console.log("✅ Migrations completed");
   } catch (error) {
