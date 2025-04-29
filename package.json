@@ -9,7 +9,7 @@
     "lint": "next lint",
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push",
-    "db:migrate": "tsx ./src/db/migrate.ts",
+    "db:migrate": "drizzle-kit generate:pg && tsx ./src/db/migrate.ts",
     "db:generate": "npx drizzle-kit generate",
     "postinstall": "npm run db:migrate"
   },
