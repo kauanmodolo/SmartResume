@@ -21,7 +21,7 @@ export const createResume = async (title: string) => {
 
     const newResume = await db
     .insert(resumes)
-    .values({title, userId})
+    .values({title, user_id})
     .returning();
 
     revalidatePath("/dashboard/resumes");
@@ -34,7 +34,7 @@ export const updateResumeData = async(id: string, data: ResumeData) => {
 
     const updatedResume = await db
     .update(resumes)
-    .set({ data, updatedAt: new Date() })
+    .set({ data, updated_at: new Date() })
     .where(eq(resumes.id, id))
     .returning();
 
@@ -52,7 +52,7 @@ export const deleteResume = async(id: string) => {
     });
 
     if(!resume) throw new Error("Currículo não encontrado.");
-    if(resume.userId !== userId) throw new Error("Você não tem permissão para deletar este currículo.");
+    if(resume.user_id !== userId) throw new Error("Você não tem permissão para deletar este currículo.");
 
     await db.delete(resumes).where(eq(resumes.id, id)).execute();
 
@@ -68,11 +68,11 @@ export const duplicateResume = async(id: string, title: string) => {
     });
 
     if(!resume) throw new Error("Currículo não encontrado.");
-    if(resume.userId !== userId) throw new Error("Você não tem permissão para duplicar este currículo.");
+    if(resume.user_id !== userId) throw new Error("Você não tem permissão para duplicar este currículo.");
 
     const newResume = await db
     .insert(resumes)
-    .values({title, userId, data: resume.data})
+    .values({title, user_id, data: resume.data})
     .returning();
 
     revalidatePath("/dashboard/resumes");
