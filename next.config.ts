@@ -1,7 +1,7 @@
 // next.config.ts
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const nextConfig: any = {
   serverExternalPackages: [
     "puppeteer-core",
     "sparticuz/chromium",
