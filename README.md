@@ -1,90 +1,3 @@
-# **Documentação do Projeto: Smart Resume **
-
-## **Introdução**
-O **Smart Resume** é uma plataforma de criação de currículos que permite criar, gerenciar e gerar currículos com inteligência artificial, oferecendo diversas funcionalidades de customização e praticidade, visando tornar a experiência de fazer o seu currículo profissional muito mais rápida e agradável.
-
---- 
-
-## **Link para acessar o sistema**
-[https://smart-resume-zeta.vercel.app]
-
-## **Descrição dos Módulos e Funcionalidades**
-
-### **1. Módulo Principal: Plataforma Smart Resume**
-
-Responsável pela navegação principal, autenticação e gerenciamento de currículos. Garante uma experiência fluida e centraliza as principais rotas do sistema.
-
-Telas/rotas disponíveis:
-
-- **Login:** Tela de autenticação via Google ou GitHub.
-- **Dashboard:** Área principal para visualizar, criar e editar currículos.
-- **Editor de Currículo:** Interface para edição detalhada das informações do currículo.
-- **Geração com I.A.:** Tela para gerar currículo automaticamente a partir de uma vaga.
-- **Download:** Opção para exportar o currículo em PDF com rotas abrindo browsers de forma automatizada e utilizando HTML com Puppeteer.
-
----
-
-### **2. Funcionalidades Principais**
-
-#### **Autenticação Social**
-
-* Permite login seguro utilizando Google e GitHub.
-
-
-#### **Criação e Edição de Currículos**
-
-* Criação de múltiplos currículos.
-* Edição dinâmica de experiências, formação, habilidades e outros campos essenciais.
-
-
-#### **Geração de Currículo com Inteligência Artificial**
-
-* Geração automática de currículos personalizados a partir de uma vaga de interesse, utilizando IA.
-* Tradução do currículo para outras línguas utilizando IA.
-
-
-#### **Download em PDF**
-
-* Geração de arquivos PDF profissionais prontos para envio ou impressão.
-
-
-#### **Customização Visual**
-
-* Diversos modelos de layout e opções de personalização para o currículo.
-
----
-
-### **3. Integração com Banco de Dados e APIs**
-
-* **Drizzle ORM + Neon:** Gerencia dados de usuários e currículos em banco PostgreSQL serverless.
-* **OpenAI API:** Utilizada para geração e tradução automática de conteúdo via IA.
-* **Auth.js:** Gerencia autenticação social e sessões de usuário.
-* **Puppeteer:** Responsável pela geração do PDF do currículo.
-
----
-
-### **4. Tecnologias Utilizadas**
-
-* **Next.js:** Framework React para frontend e backend.
-* **TypeScript:** Tipagem estática para maior segurança.
-* **Tailwind CSS:** Estilização moderna e responsiva.
-* **Node.js:** Backend para manipulação de dados e geração de PDFs.
-* **Shadcn/ui:** Componentes reutilizáveis para uma UI consistente.
-* **Vercel:** Deploy, hospedagem e CI/CD automáticos.
-* **TanStack Query** Gerenciamento de estados assíncronos e sincronização de dados.
-* **React Hook Form** Ferramenta para gerenciar formulários com facilidade.
----
-
-## **Funcionalidades**
-
-1. **Autenticação de Usuário:** Login social com Google e GitHub.
-2. **Criação e Edição de Currículos:** Múltiplos currículos personalizáveis.
-3. **Geração Automática com I.A.:** Currículo sugerido a partir de uma vaga.
-4. **Tradução:** Tradução automática do currículo para outros idiomas.
-5. **Download em PDF:** Exportação do currículo em formato PDF.
-6. **Customização Visual:** Escolha de modelos e personalização dos campos.
-
---- 
 # **Project Documentation: Smart Resume**
 
 ## **Introduction**
@@ -175,3 +88,91 @@ Available screens/routes:
 4. **Translation:** Automatic translation of resumes into other languages.
 5. **PDF Download:** Export resumes in PDF format.
 6. **Visual Customization:** Choice of templates and field customization.
+
+---
+
+# **Documentação do Projeto: Smart Resume **
+
+## **Introdução**
+O **Smart Resume** é uma plataforma de criação de currículos que permite criar, gerenciar e gerar currículos com inteligência artificial, oferecendo diversas funcionalidades de customização e praticidade, visando tornar a experiência de fazer o seu currículo profissional muito mais rápida e agradável.
+
+--- 
+
+## **Link para acessar o sistema**
+[https://smart-resume-zeta.vercel.app]
+
+## **Descrição dos Módulos e Funcionalidades**
+
+### **1. Módulo Principal: Plataforma Smart Resume**
+
+Responsável pela navegação principal, autenticação e gerenciamento de currículos. Garante uma experiência fluida e centraliza as principais rotas do sistema.
+
+Telas/rotas disponíveis:
+
+- **Login:** Tela de autenticação via Google ou GitHub.
+- **Dashboard:** Área principal para visualizar, criar e editar currículos.
+- **Editor de Currículo:** Interface para edição detalhada das informações do currículo.
+- **Geração com I.A.:** Tela para gerar currículo automaticamente a partir de uma vaga.
+- **Download:** Opção para exportar o currículo em PDF com rotas abrindo browsers de forma automatizada e utilizando HTML com Puppeteer.
+
+---
+
+### **2. Funcionalidades Principais**
+
+#### **Autenticação Social**
+
+* Permite login seguro utilizando Google e GitHub.
+
+
+#### **Criação e Edição de Currículos**
+
+* Criação de múltiplos currículos.
+* Edição dinâmica de experiências, formação, habilidades e outros campos essenciais.
+
+
+#### **Geração de Currículo com Inteligência Artificial**
+
+* Geração automática de currículos personalizados a partir de uma vaga de interesse, utilizando IA.
+* Tradução do currículo para outras línguas utilizando IA.
+
+
+#### **Download em PDF**
+
+* Geração de arquivos PDF profissionais prontos para envio ou impressão.
+
+
+#### **Customização Visual**
+
+* Diversos modelos de layout e opções de personalização para o currículo.
+
+---
+
+### **3. Integração com Banco de Dados e APIs**
+
+* **Drizzle ORM + Neon:** Gerencia dados de usuários e currículos em banco PostgreSQL serverless.
+* **OpenAI API:** Utilizada para geração e tradução automática de conteúdo via IA.
+* **Auth.js:** Gerencia autenticação social e sessões de usuário.
+* **Puppeteer:** Responsável pela geração do PDF do currículo.
+
+---
+
+### **4. Tecnologias Utilizadas**
+
+* **Next.js:** Framework React para frontend e backend.
+* **TypeScript:** Tipagem estática para maior segurança.
+* **Tailwind CSS:** Estilização moderna e responsiva.
+* **Node.js:** Backend para manipulação de dados e geração de PDFs.
+* **Shadcn/ui:** Componentes reutilizáveis para uma UI consistente.
+* **Vercel:** Deploy, hospedagem e CI/CD automáticos.
+* **TanStack Query** Gerenciamento de estados assíncronos e sincronização de dados.
+* **React Hook Form** Ferramenta para gerenciar formulários com facilidade.
+---
+
+## **Funcionalidades**
+
+1. **Autenticação de Usuário:** Login social com Google e GitHub.
+2. **Criação e Edição de Currículos:** Múltiplos currículos personalizáveis.
+3. **Geração Automática com I.A.:** Currículo sugerido a partir de uma vaga.
+4. **Tradução:** Tradução automática do currículo para outros idiomas.
+5. **Download em PDF:** Exportação do currículo em formato PDF.
+6. **Customização Visual:** Escolha de modelos e personalização dos campos.
